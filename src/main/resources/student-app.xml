@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!--<bean id="helloWorldBean" class="com.uiu.cdip.HelloWorld">
+        <property name="name" value="Shajed" />
+    </bean>-->
+
+    <!--<bean id="student" class="com.uiu.cdip.Student">
+        <property name="name" value="Shajedul"></property>
+    </bean>-->
+
+    <bean id="student-service" class="com.uiu.cdip.PartTimeStudentService"></bean>
+
+    <bean id="student-controller" class="com.uiu.cdip.StudentController">
+        <property name="studentService" ref="student-service"></property>
+    </bean>
+
+</beans>
